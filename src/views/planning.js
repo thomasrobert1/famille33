@@ -87,7 +87,10 @@ export async function renderPlanning(container, { query }) {
 
   async function loadYear(year) {
     const [eventsRes, catRes, recRes] = await Promise.all([
-      supabase.from('events').select('*')
+      supabase.from('events').select(`id, category_id, title, description, start_date, start_time, end_date, end_time,
+        location, organizer, link, recurrence_unit, recurrence_interval, recurrence_until,
+        author_first_name, author_last_name, author_number, author_promo, author_bucque,
+        status, created_at, updated_at`)
         .lte('start_date', `${year}-12-31`)
         .or(`end_date.gte.${year}-01-01,recurrence_unit.not.is.null`)
         .order('start_date'),
