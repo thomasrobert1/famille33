@@ -47,7 +47,7 @@ jobs:
       PGPASSWORD: postgres
     steps:
       - uses: actions/checkout@v4
-      - run: tests/sql/run_rls_tests.sh
+      - run: bash tests/sql/run_rls_tests.sh
 
   deploy:
     name: Publication sur GitHub Pages
