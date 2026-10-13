@@ -394,6 +394,7 @@ input[type=checkbox], input[type=radio] { width: 1.2rem; height: 1.2rem; accent-
 .tile__btn { display: block; width: 100%; padding: 0; border: 0; background: var(--ivoire-deep); aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius-s); cursor: zoom-in; }
 .tile__btn img { width: 100%; height: 100%; object-fit: cover; transition: filter 0.2s; }
 .tile__btn:hover img { filter: brightness(1.06) contrast(1.03); }
+.tile__caption { margin-top: 0.2rem; color: var(--encre-soft); font-size: 0.78rem; line-height: 1.35; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
 .tile__badge { position: absolute; left: 0.5rem; top: 0.5rem; display: inline-flex; gap: 0.3rem; align-items: center; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 999px; background: rgba(133, 87, 15, 0.92); color: #fff; }
 .tile--hidden .tile__btn img { opacity: 0.6; }
 @media (max-width: 600px) {

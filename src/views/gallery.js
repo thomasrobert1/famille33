@@ -122,6 +122,7 @@ export async function renderGallery(container) {
     return h('figure', { class: ['tile', photo.is_hidden && 'tile--hidden'] },
       h('button', { class: 'tile__btn', type: 'button', 'aria-label': photo.caption ? `Agrandir : ${photo.caption}` : 'Agrandir la photo', onClick: () => openViewer(index()) },
         h('img', { src: publicUrl('gallery', photo.thumb_path) ?? '', alt: photo.caption ?? '', width: photo.width, height: photo.height, loading: 'lazy', decoding: 'async' })),
+      photo.caption ? h('figcaption', { class: 'tile__caption' }, photo.caption) : null,
       photo.is_hidden ? h('span', { class: 'tile__badge' }, icon('eye-off', { size: 14 }), 'Masquée')
         : photo.status === 'pending' ? h('span', { class: 'tile__badge' }, icon('hourglass', { size: 14 }), 'En attente') : null);
   }
