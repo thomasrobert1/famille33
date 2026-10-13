@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:e2e": "npm run build:e2e && python3 tests/e2e/smoke.py",
-    "test:sql": "tests/sql/run_rls_tests.sh",
+    "test:sql": "bash tests/sql/run_rls_tests.sh",
     "test:watch": "vitest"
   },
   "dependencies": {

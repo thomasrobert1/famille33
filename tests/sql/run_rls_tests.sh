@@ -6,6 +6,6 @@ DB="f33_rls_$$"
 DIR="$(cd "$(dirname "$0")" && pwd)"
 createdb "$DB"
 trap 'dropdb --if-exists "$DB"' EXIT
-"$DIR/run_migrations.sh" "$DB" > /dev/null
+bash "$DIR/run_migrations.sh" "$DB" > /dev/null
 psql -q -d "$DB" -f "$DIR/rls_test.sql" | tee /tmp/f33_rls_result.txt
 ! grep -q '^ÉCHEC' /tmp/f33_rls_result.txt

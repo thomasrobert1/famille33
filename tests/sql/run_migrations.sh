@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Applique l'émulation Supabase puis toutes les migrations dans une base locale.
-# Usage : tests/sql/run_migrations.sh <nom_de_base>
+# Usage : bash tests/sql/run_migrations.sh <nom_de_base>
 set -euo pipefail
 DB="${1:-f33test}"
 DIR="$(cd "$(dirname "$0")/../.." && pwd)"
