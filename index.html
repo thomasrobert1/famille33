@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#14213A" />
+    <meta name="description" content="Espace privé de la Famille 33 des Arts et Métiers." />
+    <!--
+      Politique de sécurité du contenu : scripts du site uniquement, connexions
+      vers Supabase uniquement. Si vous utilisez un domaine personnalisé pour
+      Supabase, ajoutez-le à img-src et connect-src.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.supabase.co; font-src 'self' data:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'"
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>Famille 33</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="boot" role="status" style="font-family: system-ui, sans-serif; color: #14213a; padding: 2rem; max-width: 34rem; margin: 15vh auto; text-align: center; line-height: 1.5">
+        <span class="boot__mark" aria-hidden="true"></span>
+        <p style="margin: 0">Chargement…</p>
+        <p class="boot__help" style="opacity: 0; animation: f33-help 0s 4s forwards; margin-top: 1.5rem; font-size: 15px">
+          Le site ne démarre pas ? Ce fichier ne peut pas être ouvert directement par un double-clic.
+          Lancez <code>npm install</code> puis <code>npm run dev</code> et ouvrez l’adresse affichée,
+          ou utilisez l’aperçu hors ligne (<code>npm run apercu</code>). Voir README, section 2.
+        </p>
+      </div>
+      <style>@keyframes f33-help { to { opacity: 1; } }</style>
+    </div>
+    <noscript><p class="noscript">Ce site nécessite JavaScript pour fonctionner.</p></noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

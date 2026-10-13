@@ -1,0 +1,33 @@
+{
+  "name": "famille33",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Espace privé de la Famille 33 des Arts et Métiers",
+  "type": "module",
+  "scripts": {
+    "admin": "node scripts/admin.mjs",
+    "apercu": "npm run build:e2e && node scripts/build-preview.mjs",
+    "build": "vite build",
+    "build:e2e": "vite build --config tests/e2e/vite.e2e.config.js",
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:e2e": "npm run build:e2e && python3 tests/e2e/smoke.py",
+    "test:sql": "tests/sql/run_rls_tests.sh",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@fontsource/atkinson-hyperlegible-next": "^5.3.0",
+    "@fontsource/grenze-gotisch": "^5.3.0",
+    "@supabase/supabase-js": "^2.117.3",
+    "lucide": "^1.55.0"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.4"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}

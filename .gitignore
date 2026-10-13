@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+supabase/.temp/
+supabase/.branches/
+*.log
+.DS_Store
+# Exports de données personnelles : ne jamais les versionner
+exports/
+*.csv
+tests/e2e/.dist/
+tests/e2e/screenshots/
+apercu/

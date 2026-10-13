@@ -1,0 +1,8 @@
+# Configuration minimale pour la CLI Supabase (déploiement des fonctions).
+project_id = "famille33"
+
+[functions.member-auth]
+verify_jwt = false
+
+[functions.member-admin]
+verify_jwt = false
